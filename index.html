@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEORGE SONTO HIGH SCHOOL - Digital Library | V7</title>
+<title>GEORGE SONTO HIGH SCHOOL - Digital Library | V7 Green Yellow</title>
 <script src="https://unpkg.com/html5-qrcode"></script>
 <style>
 *{box-sizing:border-box;font-family:Arial,sans-serif}
-body{margin:0;background:#f2f4f7;color:#222}
-header{background:#12355F;color:#fff;padding:18px 16px;text-align:center}
-header h1{margin:0;font-size:28px} header h1 span{color:#FFD35C}
+body{margin:0;background:#f2f7f2;color:#222}
+header{background:#1B5E20;color:#fff;padding:18px 16px;text-align:center}
+header h1{margin:0;font-size:28px} header h1 span{color:#FFEB00}
 header p{margin:6px 0 0;opacity:.9}
-.goldbar{background:#C89614;color:#12355F;font-weight:900;padding:10px;text-align:center}
+.goldbar{background:#FFEB00;color:#1B5E20;font-weight:900;padding:10px;text-align:center}
 .wrap{max-width:1100px;margin:auto;padding:14px}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.card{background:#fff;border-radius:14px;padding:14px;text-align:center;box-shadow:0 2px 8px #0001;cursor:pointer}
+.card{background:#fff;border-radius:14px;padding:14px;text-align:center;box-shadow:0 2px 8px #0001;cursor:pointer;border-top:4px solid #1B5E20}
 .card b{font-size:28px} .card small{color:#777}
-.search{width:100%;padding:14px;border-radius:12px;border:1px solid #ddd;margin:14px 0 8px;font-size:16px}
+.search{width:100%;padding:14px;border-radius:12px;border:2px solid #1B5E20;margin:14px 0 8px;font-size:16px}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
-.fbtn{padding:10px 16px;border-radius:20px;border:2px solid #ddd;background:#fff;font-weight:900;cursor:pointer;color:#222;font-size:14px}
-.fbtn.active{background:#12355F;color:#fff;border-color:#12355F}
-.fbtn.avail.active{background:#1a7a3a;border-color:#1a7a3a}.fbtn.iss.active{background:#d67e00;border-color:#d67e00}.fbtn.bad.active{background:#c62828;border-color:#c62828}.fbtn.purp.active{background:#6a1b9a;border-color:#6a1b9a}
+.fbtn{padding:10px 16px;border-radius:20px;border:2px solid #1B5E20;background:#fff;font-weight:900;cursor:pointer;color:#1B5E20;font-size:14px}
+.fbtn.active{background:#1B5E20;color:#FFEB00;border-color:#1B5E20}
+.fbtn.avail.active{background:#1a7a3a;border-color:#1a7a3a;color:#fff}.fbtn.iss.active{background:#d67e00;border-color:#d67e00;color:#fff}.fbtn.bad.active{background:#c62828;border-color:#c62828;color:#fff}.fbtn.purp.active{background:#6a1b9a;border-color:#6a1b9a;color:#fff}
 .btns{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 button{padding:14px;border:0;border-radius:12px;font-weight:900;cursor:pointer;font-size:15px;color:#fff}
-.b-scan{background:#12355F}.b-add{background:#1a7a3a}.b-issue{background:#d67e00}.b-return{background:#0078b4}.b-prin{background:#5e35b1}
-.box{background:#fff;border-radius:14px;padding:16px;margin-top:14px;box-shadow:0 2px 8px #0001}
+.b-scan{background:#1B5E20}.b-add{background:#2E7D32}.b-issue{background:#F9A825;color:#1B5E20}.b-return{background:#0078b4}.b-prin{background:#1B5E20}
+.box{background:#fff;border-radius:14px;padding:16px;margin-top:14px;box-shadow:0 2px 8px #0001;border-left:5px solid #FFEB00}
 input,select{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:10px;font-size:15px}
 table{width:100%;border-collapse:collapse;margin-top:10px}
-th{background:#12355F;color:#fff;padding:10px;text-align:left}
+th{background:#1B5E20;color:#FFEB00;padding:10px;text-align:left}
 td{padding:10px;border-bottom:1px solid #eee;font-size:14px}
 .pill{padding:5px 10px;border-radius:20px;color:#fff;font-weight:900;font-size:12px}
 .AVAILABLE{background:#1a7a3a}.ISSUED{background:#d67e00}.DAMAGED,.LOST,.OVERDUE{background:#c62828}.NEEDS,.RESERVED{background:#6a1b9a}
@@ -36,34 +36,34 @@ td{padding:10px;border-bottom:1px solid #eee;font-size:14px}
 .due{font-size:12px;font-weight:900}.due-ok{color:#1a7a3a}.due-soon{color:#d67e00}.due-late{color:#c62828}
 .small{font-size:13px;color:#666}
 #reader{width:100%;display:none}
-#loginBox{background:#12355F;color:#fff;border-radius:14px;padding:20px;margin-top:14px;text-align:center}
+#loginBox{background:#1B5E20;color:#fff;border-radius:14px;padding:20px;margin-top:14px;text-align:center;border:4px solid #FFEB00}
 #loginBox input{max-width:400px;margin:8px auto;display:block}
 .coord-only{display:none} body.is-coord .coord-only{display:block}
 .edu-only{display:none} body.is-edu .edu-only, body.is-coord .edu-only{display:block}
 .prin-only{display:none} body.is-prin .prin-only{display:block}
-.prin-bar{background:#5e35b1;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+.prin-bar{background:#1B5E20;color:#FFEB00;border-radius:14px;padding:16px;margin-top:14px;border:3px solid #FFEB00}
 .progress{height:14px;background:#e0e0e0;border-radius:20px;overflow:hidden;margin:6px 0}
-.progress div{height:100%;background:#1a7a3a}
+.progress div{height:100%;background:#2E7D32}
 @media(max-width:700px){.cards,.btns{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<header><h1>📚 GEORGE SONTO <span>HIGH SCHOOL</span></h1><p>DIGITAL LIBRARY • FIREBASE LIVE • Vukona Press • V7</p></header>
+<header><h1>📚 GEORGE SONTO <span>HIGH SCHOOL</span></h1><p>DIGITAL LIBRARY • FIREBASE LIVE • Vukona Press • V7 • 💚💛 GREEN & YELLOW</p></header>
 <div class="goldbar">● <span id="syncStatus">LIVE - SYNCED TO FIREBASE</span> • <span id="userBadge">NOT LOGGED IN</span> • <span id="overdueBadge"></span></div>
 <div class="wrap">
 
 <div class="box" id="loginBox">
 <h3 style="margin:0">🔒 GEORGE SONTO LIBRARY LOGIN</h3>
-<p class="small" style="color:#FFD35C">Coordinator = Full Control • Educator = Issue/Return • Principal = View + Reports Only</p>
-<p class="small" style="color:#cfe0ff">Master PINs: Coord GS2026 | Educator GS1234 | Principal GS9999<br>OR use your own Name + Code added by Coordinator</p>
+<p class="small" style="color:#FFEB00">Coordinator = Full Control • Educator = Issue/Return • Principal = View + Reports Only</p>
+<p class="small" style="color:#d0f0d0">Master PINs: Coord GS2026 | Educator GS1234 | Principal GS9999<br>OR use your own Name + Code added by Coordinator</p>
 <input id="loginName" placeholder="Your Name - EXACT as added e.g. Mrs Mokoena">
 <input id="loginPin" type="password" placeholder="PIN / Your Code - e.g. GS2026 or 5555">
-<button class="b-add" onclick="doLogin()" style="max-width:400px;width:100%">LOGIN</button>
-<button onclick="doLogout()" style="background:#666;max-width:400px;width:100%;margin-top:8px">LOGOUT</button>
+<button class="b-add" onclick="doLogin()" style="max-width:400px;width:100%;background:#FFEB00;color:#1B5E20">LOGIN</button>
+<button onclick="doLogout()" style="background:#555;max-width:400px;width:100%;margin-top:8px">LOGOUT</button>
 </div>
 
 <div class="prin-only">
-<div class="prin-bar"><h3 style="margin:0">👨‍💼 PRINCIPAL DASHBOARD - GEORGE SONTO HIGH SCHOOL</h3><p style="margin:6px 0 0;opacity:.9">Read-Only • Fixed Return Date: 30 November Every Year</p></div>
+<div class="prin-bar"><h3 style="margin:0">👨‍💼 PRINCIPAL DASHBOARD - GEORGE SONTO HIGH SCHOOL</h3><p style="margin:6px 0 0;opacity:.9;color:#fff">Read-Only • Fixed Return Date: 30 November Every Year</p></div>
 <div class="box">
 <h3>📊 School Overview</h3><div id="prinStats"></div>
 <h3>⏰ Overdue Books - After 30 November</h3><div id="prinOverdue"></div>
@@ -132,8 +132,8 @@ td{padding:10px;border-bottom:1px solid #eee;font-size:14px}
 <h3>📤 Issue / Return Book - Educator / Coordinator</h3>
 <input id="iControl" placeholder="Control No - e.g. GS-002">
 <input id="iLearner" placeholder="Learner Name + Grade + Class - e.g. Thandi M. Gr 11A">
-<div style="background:#fff3cd;border:2px solid #C89614;border-radius:10px;padding:12px;text-align:center;margin:8px 0">
-<b>📅 FIXED RETURN DATE: 30 NOVEMBER <span id="dueYearLabel"></span></b><br>
+<div style="background:#FFFDE7;border:2px solid #FFEB00;border-radius:10px;padding:12px;text-align:center;margin:8px 0">
+<b style="color:#1B5E20">📅 FIXED RETURN DATE: 30 NOVEMBER <span id="dueYearLabel"></span></b><br>
 <span class="small">All books issued now must be returned by <b>30 November</b> every year. No exceptions.<br>After 30 Nov, book automatically becomes ⏰ OVERDUE.</span>
 </div>
 <div class="btns" style="margin-top:8px">
@@ -141,7 +141,7 @@ td{padding:10px;border-bottom:1px solid #eee;font-size:14px}
 <button class="b-return" onclick="returnBook()">RETURN BOOK</button>
 </div>
 </div>
-<div class="box prin-only" style="background:#f3efff;border:2px solid #5e35b1"><b>👨‍💼 Principal Mode:</b> View-Only. Fixed Due Date: 30 November every year.</div>
+<div class="box prin-only" style="background:#E8F5E9;border:2px solid #1B5E20"><b>👨‍💼 Principal Mode:</b> View-Only. Fixed Due Date: 30 November every year.</div>
 
 <div class="box">
 <h3>📚 George Sonto Book List - LIVE FROM FIREBASE</h3>
@@ -156,25 +156,23 @@ td{padding:10px;border-bottom:1px solid #eee;font-size:14px}
 <button class="b-scan" onclick="addEducator()">ADD EDUCATOR (Coordinator Only)</button>
 <div id="eduList" style="margin-top:10px"></div>
 </div>
-<p class="small" style="text-align:center">Built by Vusi Chauke • vusichauke3037@gmail.com • 078 023 3263 • Vukona Press • Firebase Firestore • George Sonto V7 Fixed Due 30 Nov</p>
+<p class="small" style="text-align:center">Built by Vusi Chauke • vusichauke3037@gmail.com • 078 023 3263 • Vukona Press • Firebase: george-sonto-library • George Sonto V7 💚💛 Fixed Due 30 Nov</p>
 </div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, addDoc, doc, updateDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-// SAME Firebase project as Wordsworth, but SEPARATE collections for George Sonto
 const firebaseConfig = {
-  apiKey: "AIzaSyAJyTZ-tmrsY0m-EmN80HSRERSR_tiVX4E",
-  authDomain: "wordsworth-library.firebaseapp.com",
-  projectId: "wordsworth-library",
-  storageBucket: "wordsworth-library.firebasestorage.app",
-  messagingSenderId: "236216515385",
-  appId: "1:236216515385:web:a349af2eee425df5bf06e8",
-  measurementId: "G-GY0TP7SG4J"
+  apiKey: "AIzaSyDwEeFqlUb_bzlG-Hwd4k1klQpE9lIxlU4",
+  authDomain: "george-sonto-library.firebaseapp.com",
+  projectId: "george-sonto-library",
+  storageBucket: "george-sonto-library.firebasestorage.app",
+  messagingSenderId: "240766815652",
+  appId: "1:240766815652:web:44c70e75a64a6d2f20c531",
+  measurementId: "G-9QE8LT3XBT"
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-// ===== GEORGE SONTO PINS =====
 const COORD_PIN = "GS2026"; const EDU_PIN = "GS1234"; const PRIN_PIN = "GS9999";
 const PREFIX = "GS-";
 const BOOKS_COL = "georgesonto_books";
@@ -239,7 +237,7 @@ onSnapshot(collection(db,EDU_COL), (snap)=>{ educators=snap.docs.map(d=>({id:d.i
 window.showAdd = () => { if(blockPrincipal()||!needCoord()) return; document.getElementById('addBox').style.display='block'; document.getElementById('fControl').value=PREFIX+String(books.length+1).padStart(3,'0'); };
 window.addBook = async () => { if(blockPrincipal()||!needCoord()) return; const data={c:document.getElementById('fControl').value.trim(), isbn:document.getElementById('fISBN').value.trim(), t:document.getElementById('fTitle').value.trim(), a:document.getElementById('fAuthor').value.trim(), g:document.getElementById('fGrade').value, cond:document.getElementById('fCondition').value, s:document.getElementById('fStatus').value, l:'-', due:null, issuedAt:null, createdAt:Date.now(), addedBy:currentName}; if(!data.c||!data.t) return alert('Enter Control No + Title'); await addDoc(collection(db,BOOKS_COL),data); alert('✅ Saved: '+data.c+' - Status: '+data.s+' - Condition: '+data.cond); };
 window.issueBook = async () => { if(blockPrincipal()) return; let c=document.getElementById('iControl').value.trim().toUpperCase(); let l=document.getElementById('iLearner').value.trim(); let b=books.find(x=>x.c.toUpperCase()===c); if(!b) return alert('Book not found'); let due = getFixedDueDate(); await updateDoc(doc(db,BOOKS_COL,b.id),{s:'ISSUED',l:l||'Learner', due:due, issuedAt:Date.now(), loanDays:'FIXED-30NOV'}); alert('📤 Issued '+c+' to '+l+'\n📅 FIXED Due Date: '+fmtDate(due)+'\n\nAll books must be returned by 30 November every year.'); };
-window.returnBook = async () => { if(blockPrincipal()) return; let c=document.getElementById('iControl').value.trim().toUpperCase(); let b=books.find(x=>x.c.toUpperCase()===c); if(!b) return alert('Book not found'); let late = b.due && b.due < Date.now() ? ' ⚠️ Was OVERDUE by '+Math.abs(daysLeft(b.due))+' day(s) - after 30 Nov.') : ''; await updateDoc(doc(db,BOOKS_COL,b.id),{s:'AVAILABLE',l:'-', due:null, issuedAt:null}); alert('📥 Returned '+c+late); };
+window.returnBook = async () => { if(blockPrincipal()) return; let c=document.getElementById('iControl').value.trim().toUpperCase(); let b=books.find(x=>x.c.toUpperCase()===c); if(!b) return alert('Book not found'); let late = b.due && b.due < Date.now() ? ' ⚠️ Was OVERDUE by '+Math.abs(daysLeft(b.due))+' day(s) - after 30 Nov.' : ''; await updateDoc(doc(db,BOOKS_COL,b.id),{s:'AVAILABLE',l:'-', due:null, issuedAt:null}); alert('📥 Returned '+c+late); };
 window.changeStatus = async (id) => { if(blockPrincipal()||!needCoord()) return; let b=books.find(x=>x.id===id); let ns=prompt('New Status: AVAILABLE / ISSUED / DAMAGED / LOST / NEEDS REPAIR / OVERDUE / RESERVED',displayStatus(b)); if(!ns) return; let nc=prompt('New Condition: NEW / GOOD / FAIR / WORN / DAMAGED', b.cond||'GOOD'); await updateDoc(doc(db,BOOKS_COL,id),{s:ns.toUpperCase(), cond:(nc||b.cond||'GOOD').toUpperCase()}); };
 window.delBook = async (id,c) => { if(blockPrincipal()||!needCoord()) return; if(!confirm('Delete '+c+'? Coordinator Only.')) return; await deleteDoc(doc(db,BOOKS_COL,id)); };
 window.addEducator = async () => { if(blockPrincipal()||!needCoord()) return; let name=document.getElementById('eName').value.trim(); let code=document.getElementById('eCode').value.trim(); let role=document.getElementById('eRole').value; if(!name) return alert('Enter name'); if(!code) return alert('Enter Code / PIN for this educator'); await addDoc(collection(db,EDU_COL),{name,code,role,createdAt:Date.now()}); alert('✅ Educator Added: '+name+' ('+role+')\n\nThey login with:\nName: '+name+'\nCode: '+code); document.getElementById('eName').value=''; document.getElementById('eCode').value=''; };
@@ -288,8 +286,8 @@ window.render = () => {
   document.getElementById('list').innerHTML = filtered.map(b=>{
     let ds = displayStatus(b);
     return `<tr><td><b>${b.c}</b><br><small>ISBN: ${b.isbn||'-'}<br>${b.g}</small></td><td><b>${b.t}</b><br><small>${b.a||''}</small></td><td><span class="pill ${ds}">${ds}</span></td><td><span class="cond ${b.cond==='DAMAGED'?'DAMAGED-C':(b.cond||'GOOD')}">${b.cond||'GOOD'}</span></td><td>${b.l}${dueText(b)}</td>
-    ${isCoord?`<td><button style="background:#12355F;padding:8px" onclick="changeStatus('${b.id}')">Edit</button> <button style="background:#c62828;padding:8px" onclick="delBook('${b.id}','${b.c}')">Delete</button></td>`:``}</tr>`; }).join('') || '<tr><td colspan=6>No books with this Status / Condition. Tap ALL to reset.</td></tr>';
-  document.getElementById('eduList').innerHTML = educators.map(e=>`<span style="background:#eef;padding:6px 10px;border-radius:20px;display:inline-block;margin:3px">${e.name} - ${e.role} - Code: ${e.code} <b style="cursor:pointer;color:red" onclick="delEducator('${e.id}','${e.name}')">×</b></span>`).join('') || '<small>No educators yet</small>';
+    ${isCoord?`<td><button style="background:#1B5E20;padding:8px" onclick="changeStatus('${b.id}')">Edit</button> <button style="background:#c62828;padding:8px" onclick="delBook('${b.id}','${b.c}')">Delete</button></td>`:``}</tr>`; }).join('') || '<tr><td colspan=6>No books with this Status / Condition. Tap ALL to reset.</td></tr>';
+  document.getElementById('eduList').innerHTML = educators.map(e=>`<span style="background:#E8F5E9;padding:6px 10px;border-radius:20px;display:inline-block;margin:3px">${e.name} - ${e.role} - Code: ${e.code} <b style="cursor:pointer;color:red" onclick="delEducator('${e.id}','${e.name}')">×</b></span>`).join('') || '<small>No educators yet</small>';
   renderPrincipal();
 };
 let scanner=null, scanning=false;
